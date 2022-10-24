@@ -1,0 +1,298 @@
+﻿Brian Schoellner
+[10/23/22]seed@VM:~$ man -k
+apropos what?
+[10/23/22]seed@VM:~$ pwd
+/home/seed
+[10/23/22]seed@VM:~$ mkdir
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+[10/23/22]seed@VM:~$ mkdir test
+[10/23/22]seed@VM:~$ cd test
+10/23/22]seed@VM:~/test$ ps
+    PID TTY          TIME CMD
+  15184 pts/0    00:00:00 bash
+  15331 pts/0    00:00:00 ps
+[10/23/22]seed@VM:~/test$ ls
+[10/23/22]seed@VM:~/test$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+udev              474024        0    474024   0% /dev
+tmpfs             100488     1460     99028   2% /run
+/dev/sda5       81526200 11981136  65360744  16% /
+tmpfs             502424        0    502424   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+tmpfs             502424        0    502424   0% /sys/fs/cgroup
+/dev/loop0         51072    51072         0 100% /snap/snap-store/467
+/dev/loop1         63616    63616         0 100% /snap/gtk-common-themes/1506
+/dev/loop3        261760   261760         0 100% /snap/gnome-3-34-1804/36
+/dev/loop4         56320    56320         0 100% /snap/core18/1880
+/dev/sda1         523248        4    523244   1% /boot/efi
+/dev/loop5         56960    56960         0 100% /snap/core18/2566
+tmpfs             100484       52    100432   1% /run/user/1000
+/dev/loop6         49152    49152         0 100% /snap/snapd/17029
+/dev/loop7         64768    64768         0 100% /snap/core20/1623
+/dev/loop8           128      128         0 100% /snap/bare/5
+/dev/loop9        224256   224256         0 100% /snap/gnome-3-34-1804/77
+/dev/loop10        47104    47104         0 100% /snap/snap-store/599
+/dev/loop11        93952    93952         0 100% /snap/gtk-common-themes/1535
+/dev/loop12       354688   354688         0 100% /snap/gnome-3-38-2004/119
+/dev/loop2         66432    66432         0 100% /snap/sublime-text/112
+[10/23/22]seed@VM:~/test$ kill
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+[10/23/22]seed@VM:~/test$ killall
+Usage: killall [ -Z CONTEXT ] [ -u USER ] [ -y TIME ] [ -o TIME ] [ -eIgiqrvw ]
+               [ -s SIGNAL | -SIGNAL ] NAME...
+       killall -l, --list
+       killall -V, --version
+
+
+  -e,--exact          require exact match for very long names
+  -I,--ignore-case    case insensitive process name match
+  -g,--process-group  kill process group instead of process
+  -y,--younger-than   kill processes younger than TIME
+  -o,--older-than     kill processes older than TIME
+  -i,--interactive    ask for confirmation before killing
+  -l,--list           list all known signal names
+  -q,--quiet          don't print complaints
+  -r,--regexp         interpret NAME as an extended regular expression
+  -s,--signal SIGNAL  send this signal instead of SIGTERM
+  -u,--user USER      kill only process(es) running as USER
+  -v,--verbose        report if the signal was successfully sent
+  -V,--version        display version information
+  -w,--wait           wait for processes to die
+  -n,--ns PID         match processes that belong to the same namespaces
+                      as PID
+  -Z,--context REGEXP kill only process(es) having context
+                      (must precede other arguments)
+
+
+[10/23/22]seed@VM:~/test$ ifconfig
+docker0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        inet 172.17.0.1  netmask 255.255.0.0  broadcast 172.17.255.255
+        ether 02:42:fc:e5:aa:e3  txqueuelen 0  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.4  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::8960:9a8d:f155:f039  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:4c:ed:d8  txqueuelen 1000  (Ethernet)
+        RX packets 1200946  bytes 1800922195 (1.8 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 279221  bytes 20801152 (20.8 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2852  bytes 267287 (267.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2852  bytes 267287 (267.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+
+[10/23/22]seed@VM:~/test$ cal
+    October 2022      
+Su Mo Tu We Th Fr Sa  
+                   1  
+ 2  3  4  5  6  7  8  
+ 9 10 11 12 13 14 15  
+16 17 18 19 20 21 22  
+23 24 25 26 27 28 29  
+30 31                 
+[10/23/22]seed@VM:~/test$ whereis Documents
+Documents:
+[10/23/22]seed@VM:~/test$ ^C
+
+
+10/23/22]seed@VM:~/test$ cd ..
+[10/23/22]seed@VM:~$ rm test
+rm: cannot remove 'test': Is a directory
+[10/23/22]seed@VM:~$ ls
+Desktop    Downloads  Pictures  snap       test
+Documents  Music      Public    Templates  Videos
+[10/23/22]seed@VM:~$ cd Documents/
+[10/23/22]seed@VM:~/Documents$ ls
+[10/23/22]seed@VM:~/Documents$ cd ..
+[10/23/22]seed@VM:~$ cd Desktop/
+[10/23/22]seed@VM:~/Desktop$ ls
+Programs  src
+[10/23/22]seed@VM:~/Desktop$ cd src
+[10/23/22]seed@VM:~/.../src$ ls
+a.out  hello.c  hello.cpp
+[10/23/22]seed@VM:~/.../src$ ./a.out
+Hello, World![10/23/22]seed@VM:~/.../src$ 
+[10/23/22]seed@VM:~/.../src$ gcc hello.c -o hi
+[10/23/22]seed@VM:~/.../src$ ls
+a.out  hello.c  hello.cpp  hi
+[10/23/22]seed@VM:~/.../src$ hi
+Hello, World![10/23/22]seed@VM:~/.../src$ cd ..
+[10/23/22]seed@VM:~/Desktop$ cd ..
+[10/23/22]seed@VM:~$ 
+[10/23/22]seed@VM:~$ touch brian.c
+[10/23/22]seed@VM:~$ ls
+brian.c  Documents  Music     Public  Templates  Videos
+Desktop  Downloads  Pictures  snap    test
+[10/23/22]seed@VM:~$ tar cvf brian.c
+tar: Cowardly refusing to create an empty archive
+Try 'tar --help' or 'tar --usage' for more information.
+[10/23/22]seed@VM:~$ tar cvf brian.c dirname/
+tar: dirname: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+[10/23/22]seed@VM:~$ tar cvf brian.c test/
+test/
+[10/23/22]seed@VM:~$ ls
+brian.c  Documents  Music     Public  Templates  Videos
+Desktop  Downloads  Pictures  snap    test
+[10/23/22]seed@VM:~$ cd test
+[10/23/22]seed@VM:~/test$ ls
+[10/23/22]seed@VM:~/test$ cd ..
+[10/23/22]seed@VM:~$ tar tvf brian.c
+drwxrwxr-x seed/seed         0 2022-10-23 21:01 test/
+[10/23/22]seed@VM:~$ 
+[10/23/22]seed@VM:~$ find -iname "brian.c"
+./brian.c
+[10/23/22]seed@VM:~$ find -iname "hello.c"
+./Desktop/src/hello.c
+[10/23/22]seed@VM:~$ find ~ -empty
+/home/seed/.atom/recovery
+/home/seed/Videos
+/home/seed/Documents
+/home/seed/test
+/home/seed/.mozilla/firefox/Crash Reports/events
+/home/seed/.mozilla/firefox/Pending Pings
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/minidumps
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/storage/default/moz-extension+++2ca63e7c-0d6b-4014-a912-158215604e55^userContextId=4294967295/idb/3647222921wleabcEoxlt-eengsairo.files
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/storage/default/moz-extension+++81821b7b-9802-4a86-8911-e108bbf5d646^userContextId=4294967295/idb/3647222921wleabcEoxlt-eengsairo.files
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/storage/temporary
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/storage/permanent/chrome/idb/2823318777ntouromlalnodry--naod.files
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/storage/permanent/chrome/idb/3870112724rsegmnoittet-es.files/journals
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/storage/permanent/chrome/idb/3561288849sdhlie.files
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/storage/permanent/chrome/idb/1657114595AmcateirvtiSty.files
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/storage/permanent/chrome/idb/2918063365piupsah.files
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/storage/permanent/chrome/idb/1451318868ntouromlalnodry--epcr.files
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/ClientAuthRememberList.txt
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/crashes/events
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/AlternateServices.txt
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/SecurityPreloadState.txt
+/home/seed/.mozilla/firefox/2iy3r6ri.default-release/.parentlock
+/home/seed/.mozilla/systemextensionsdev
+/home/seed/.mozilla/extensions
+/home/seed/snap/snap-store/common/.cache/appstream
+/home/seed/snap/snap-store/common/.cache/gnome-software/cssresource
+/home/seed/snap/snap-store/common/.cache/gnome-software/icons
+/home/seed/snap/snap-store/common/.cache/gnome-software/odrs
+/home/seed/snap/sublime-text/112
+/home/seed/snap/sublime-text/common
+/home/seed/.sudo_as_admin_successful
+/home/seed/.local/share/icc
+/home/seed/.local/share/applications
+/home/seed/.local/share/ibus-table
+/home/seed/.local/share/sounds
+/home/seed/.local/share/webkitgtk/databases/indexeddb/v1
+/home/seed/.local/share/webkitgtk/deviceidhashsalts/1
+/home/seed/.local/share/webkitgtk/localstorage
+/home/seed/.local/share/gnome-settings-daemon/input-sources-converted
+/home/seed/.local/share/gnome-shell/gnome-overrides-migrated
+/home/seed/.local/share/evolution/tasks/trash
+/home/seed/.local/share/evolution/mail/trash
+/home/seed/.local/share/evolution/memos/trash
+/home/seed/.local/share/evolution/addressbook/system/photos
+/home/seed/.local/share/evolution/addressbook/trash
+/home/seed/.local/share/evolution/calendar/trash
+/home/seed/.local/share/backgrounds
+/home/seed/.local/share/nautilus/scripts
+/home/seed/.ssh
+/home/seed/.vscode/extensions/ms-vscode.cpptools-1.12.4-linux-x64/release.flag
+/home/seed/.vscode/extensions/ms-vscode.cmake-tools-1.12.27/release.flag
+/home/seed/.config/gnome-session/saved-session
+/home/seed/.config/Atom/Cookies-journal
+/home/seed/.config/Atom/blob_storage/6bd2c404-9b3c-4348-8c1e-cfaf0df2fa93
+/home/seed/.config/Atom/Session Storage/LOCK
+/home/seed/.config/Atom/IndexedDB/file__0.indexeddb.leveldb/LOCK
+/home/seed/.config/Atom/Local Storage/leveldb/LOCK
+/home/seed/.config/Atom/QuotaManager-journal
+/home/seed/.config/update-notifier
+/home/seed/.config/enchant/en_US.dic
+/home/seed/.config/enchant/en_US.exc
+/home/seed/.config/Code/Backups
+/home/seed/.config/Code/logs/20221023T175029/exthost1/output_logging_20221023T175041/1-remote-attach.log
+/home/seed/.config/Code/logs/20221023T175029/output_1_20221023T175035/tasks.log
+/home/seed/.config/Code/logs/20221023T175029/output_1_20221023T175035/extensions.log
+/home/seed/.config/Code/logs/20221023T175029/editSessions.log
+/home/seed/.config/Code/logs/20221023T170048/exthost1/output_logging_20221023T170100/2-JSON Language Server.log
+/home/seed/.config/Code/logs/20221023T170048/exthost1/output_logging_20221023T170328/2-remote-attach.log
+/home/seed/.config/Code/logs/20221023T170048/ptyhost.log
+/home/seed/.config/Code/logs/20221023T170048/output_1_20221023T170322/tasks.log
+/home/seed/.config/Code/logs/20221023T170048/output_1_20221023T170322/extensions.log
+/home/seed/.config/Code/logs/20221023T170048/output_1_20221023T170053/tasks.log
+/home/seed/.config/Code/logs/20221023T170048/output_1_20221023T170053/extensions.log
+/home/seed/.config/Code/logs/20221023T170048/editSessions.log
+/home/seed/.config/Code/User/snippets
+/home/seed/.config/Code/Cookies-journal
+/home/seed/.config/Code/databases/Databases.db-journal
+/home/seed/.config/Code/WebStorage/QuotaManager-journal
+/home/seed/.config/Code/Crashpad/pending
+/home/seed/.config/Code/Crashpad/new
+/home/seed/.config/Code/Crashpad/completed
+/home/seed/.config/Code/Crashpad/attachments
+/home/seed/.config/Code/blob_storage/e027dca0-ea82-4ce4-b689-73e4b687e9db
+/home/seed/.config/Code/Session Storage/LOCK
+/home/seed/.config/Code/Service Worker/Database/LOCK
+/home/seed/.config/Code/Local Storage/leveldb/000006.log
+/home/seed/.config/Code/Local Storage/leveldb/LOCK
+/home/seed/.config/sublime-text/Lib/python38
+/home/seed/.config/sublime-text/Lib/python33
+/home/seed/.config/sublime-text/Installed Packages
+/home/seed/.config/sublime-text/Log
+/home/seed/.config/sublime-text/Packages/User
+/home/seed/.config/goa-1.0
+/home/seed/.cache/ibus-table
+/home/seed/.cache/yelp/WebKitCache/Version 16/Blobs
+/home/seed/.cache/mozilla/firefox/2iy3r6ri.default-release/cache2/doomed
+/home/seed/.cache/mozilla/firefox/2iy3r6ri.default-release/thumbnails
+/home/seed/.cache/mozilla/firefox/dt077v31.default
+/home/seed/.cache/thumbnails/fail/gnome-thumbnail-factory
+/home/seed/.cache/thumbnails/large
+/home/seed/.cache/libgweather
+/home/seed/.cache/evolution/tasks/trash
+/home/seed/.cache/evolution/mail/trash
+/home/seed/.cache/evolution/memos/trash
+/home/seed/.cache/evolution/sources/trash
+/home/seed/.cache/evolution/addressbook/trash
+/home/seed/.cache/evolution/calendar/trash
+/home/seed/.cache/sublime-text/Index/LOCK
+/home/seed/Templates
+/home/seed/Music
+/home/seed/Public
+/home/seed/.gnupg/private-keys-v1.d
+[10/23/22]seed@VM:~$ gedit brian.c
+   
+Killed
+[10/23/22]seed@VM:~$ 
+[10/23/22]seed@VM:~$ cd Desktop/
+[10/23/22]seed@VM:~/Desktop$ cd src/
+[10/23/22]seed@VM:~/.../src$ ls
+a.out  hello.c  hello.cpp  hi
+[10/23/22]seed@VM:~/.../src$ vim +5 hello.c
+
+
+[1]+  Stopped                 vim +5 hello.c
+[10/23/22]seed@VM:~/.../src$ 
+[10/23/22]seed@VM:~/.../src$ ls -ltr
+total 48
+-rw-rw-r-- 1 seed seed   110 Oct 23 19:44 hello.cpp
+-rw-rw-r-- 1 seed seed   145 Oct 23 19:46 hello.c
+-rwxrwxr-x 1 seed seed 16696 Oct 23 19:47 a.out
+-rwxrwxr-x 1 seed seed 16696 Oct 23 21:08 hi
+[10/23/22]seed@VM:~/.../src$ pwd
+/home/seed/Desktop/src
+[10/23/22]seed@VM:~/.../src$ g++ hello.c
+hello.c    hello.cpp  
+[10/23/22]seed@VM:~/.../src$ g++ hello.cpp
+[10/23/22]seed@VM:~/.../src$ ./a.out
+Hello World![10/23/22]seed@VM:~/.../src$
